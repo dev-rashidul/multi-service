@@ -1,0 +1,473 @@
+/* Base Style CSS Start */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+/* Mazzard Font */
+
+@font-face {
+  font-family: Mazzard;
+  src: url(../fonts/MazzardM-Thin.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Mazzard;
+  src: url(../fonts/MazzardM-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Mazzard;
+  src: url(../fonts/MazzardM-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Mazzard;
+  src: url(../fonts/MazzardM-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Mazzard;
+  src: url(../fonts/MazzardM-SemiBold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Mazzard;
+  src: url(../fonts/MazzardM-Bold.otf);
+  font-weight: 700;
+}
+
+/* Gilroy Font */
+
+@font-face {
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: 400;
+}
+
+body {
+  font-family: Mazzard;
+  scroll-behavior: smooth;
+}
+
+/* Colors */
+
+:root {
+  --primary: #242934;
+  --gray: #a9a9a9;
+  --dark-gary: #646974;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.dark__btn a,
+.dark__btn a:focus,
+.light__btn a,
+.light__btn a:focus {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--primary);
+  padding: 18px 36px !important;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark__btn a:hover {
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--primary);
+}
+
+.light__btn a,
+.light__btn a:focus {
+  color: var(--primary);
+  background: var(--white);
+  border: 1px solid var(--white);
+}
+
+.light__btn a:hover {
+  color: var(--white);
+  background: transparent;
+}
+
+#About {
+  scroll-margin-top: 5vh;
+}
+
+embed {
+  height: 100vh;
+}
+
+/* Base Style CSS End */
+
+/* Header Part CSS Start */
+
+/* Navigation Section CSS Start */
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 50px 0 20px;
+  z-index: 999;
+}
+
+.navbar.sticky,
+.mobile-navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+  z-index: 999;
+  -webkit-animation: sticky 1.2s;
+  animation: sticky 1.2s;
+}
+
+.mobile-navbar.sticky {
+  padding: 30px 20px;
+}
+
+@keyframes sticky {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.navbar .container {
+  justify-content: start;
+}
+
+.navbar-nav {
+  padding-left: 80px;
+}
+
+.nav-link,
+.nav-link:focus {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--primary);
+  padding: 14px 15px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+li.active .nav-link {
+  color: var(--white) !important;
+}
+
+.nav-link.active {
+  color: var(--white) !important;
+}
+
+.navbar.sticky .nav-link {
+  color: var(--white);
+}
+
+.nav-link:hover {
+  color: var(--white) !important;
+}
+
+@media (max-width: 992px) {
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .logo a {
+    font-size: 20px;
+    color: var(--black);
+  }
+
+  .mobile-navbar {
+    position: fixed;
+    width: 100%;
+    padding: 10px 25px 10px 20px;
+    background: var(--white);
+    z-index: 999;
+  }
+
+  .mobile-navbar.sticky {
+    padding: 10px 20px !important;
+    background: var(--white);
+    z-index: 999;
+  }
+
+  .mobile__nav {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    left: -100%;
+    padding: 50px;
+    background: var(--white);
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .mobile__nav.active {
+    left: 0;
+  }
+
+  .mobile__nav ul li {
+    padding: 20px 0;
+    border-top: 2px solid var(--black);
+  }
+
+  .mobile__nav ul li:last-child {
+    border-bottom: 2px solid var(--black);
+  }
+
+  .mobile__nav ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Playfair Display";
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .mobile__nav ul li a:hover {
+    color: var(--primary);
+  }
+
+  .mobile-navbar.sticky .mobile__nav ul li a {
+    color: var(--black);
+  }
+
+  .mm__buttons {
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .mm__buttons .primary-btn a {
+    display: block;
+    width: 334px;
+    margin: auto;
+  }
+
+  .mm__buttons .view_tour_guide_btn {
+    padding-top: 30px;
+    padding-left: 0;
+  }
+
+  .mm__buttons .view_tour_guide_btn a {
+    color: var(--black);
+  }
+
+  .navbar-toggler {
+    border: 0 !important;
+  }
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+
+  .navbar-toggler .toggler-icon {
+    width: 25px;
+    height: 2px;
+    background-color: var(--black);
+    display: block;
+    transition: all 0.2s;
+  }
+
+  .middle-bar {
+    margin: 5px auto;
+  }
+
+  .navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+
+  .navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+
+  .navbar-toggler.active .top-bar {
+    transform: rotate(0);
+  }
+
+  .navbar-toggler.active .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  .navbar-toggler.active .bottom-bar {
+    transform: rotate(0);
+  }
+
+  .navbar-toggler.active .toggler-icon {
+    background-color: var(--black);
+  }
+}
+
+/* Navigation Section CSS End */
+
+/* Header Part CSS End */
+
+/* Footer Part CSS Start */
+
+.footer__wrapper {
+  background: var(--primary);
+  padding: 60px 0;
+}
+
+.footer__about {
+  max-width: 392px;
+}
+
+.footer__about h2 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--white);
+}
+
+.footer__about p {
+  color: var(--white);
+  padding-top: 10px;
+}
+
+.footer__call-btn a,
+.footer__call-btn a:focus {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+  background: var(--white);
+  padding: 16px 60px !important;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__call-btn a:hover {
+  color: var(--white);
+  background: var(--black);
+}
+
+.footer__menu {
+  padding-top: 50px;
+}
+
+.footer__privacy a {
+  font-family: Gilroy;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  text-decoration-line: underline;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__privacy a:hover {
+  color: var(--gray);
+}
+
+.footer__links h6 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--white);
+}
+
+.footer__links ul li {
+  padding: 6px 0;
+}
+
+.footer__links ul li a,
+.footer__links ul a {
+  font-family: Gilroy;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  text-decoration-line: underline;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__links ul li a:hover,
+.footer__links ul a:hover {
+  color: var(--gray);
+}
+
+.footer__links__bold ul li a {
+  font-family: Mazzard;
+  font-weight: 700;
+}
+
+.footer__copyright p {
+  font-family: Gilroy;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.1px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.footer__social ul li {
+  padding-left: 30px;
+}
+
+.footer__social ul li a i {
+  font-size: 20px;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__social ul li a i:hover {
+  color: var(--gray);
+}
+
+embed {
+  height: 100vh;
+}
+
+/* Footer Part CSS End */
