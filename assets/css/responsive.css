@@ -1,11 +1,30 @@
 /* Min Width 1201px and Max Width 1399400*/
 
 @media (min-width: 1201px) and (max-width: 1400px) {
+  .hero__content {
+    padding: 170px 50px 80px 19%;
+  }
 }
 
 /* Min Width 993px and Max Width 1199200*/
 
 @media (min-width: 993px) and (max-width: 1200px) {
+  .hero__content {
+    padding: 169px 50px 80px 19%;
+  }
+
+  .hero__content h1,
+  .contact__container h2 {
+    font-size: 56px;
+  }
+
+  .services__content h2 {
+    font-size: 48px;
+  }
+
+  .faq__content {
+    padding-right: 0;
+  }
 }
 
 /* Min Width 769px and Max Width 992px */
@@ -14,17 +33,108 @@
   .mobile__nav {
     padding: 30px 30px 0 20px;
   }
+
+  .hero__content {
+    padding: 80px 50px 80px 2%;
+  }
+
+  .hero__content h1,
+  .contact__container h2 {
+    font-size: 56px;
+  }
+
+  .hero__img {
+    display: none;
+  }
+
+  .about__content {
+    padding-left: 30px;
+  }
+
+  .services__content h2 {
+    font-size: 48px;
+  }
+
+  .faq__content {
+    padding-right: 0;
+  }
 }
 
 /* Min Width 300px and Max Width 768px */
 
 @media (min-width: 300px) and (max-width: 768px) {
+  .dark__btn a,
+  .dark__btn a:focus,
+  .light__btn a,
+  .light__btn a:focus {
+    padding: 16px 30px !important;
+  }
+
   .mobile__nav {
     padding: 30px 30px 0 20px;
   }
 
-  .mm__buttons .primary-btn a {
-    width: 100%;
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero__container {
+    padding: 0 20px;
+  }
+
+  .hero__content {
+    padding: 120px 0px 90px;
+  }
+
+  .hero__content h1,
+  .contact__container h2 {
+    font-size: 45px;
+  }
+
+  .hero__img {
+    display: none;
+  }
+
+  .about__content {
+    padding-top: 50px;
+    padding-left: 0;
+  }
+
+  .about__buttons {
+    margin-left: 30px;
+  }
+
+  .services__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .services__card {
+    padding: 80px 20px;
+    overflow: hidden;
+  }
+
+  .services__content h2 {
+    font-size: 45px;
+  }
+
+  .faq__content {
+    padding-right: 0;
+  }
+
+  .faq__content h2 {
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .input__fields {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 0px;
+  }
+
+  .contact__wrapper {
+    padding: 80px 0;
   }
 
   .footer__about p {

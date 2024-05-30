@@ -149,7 +149,7 @@ nav.navbar {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--white);
+  background: var(--primary);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   padding: 20px 0;
   z-index: 999;
@@ -174,6 +174,15 @@ nav.navbar {
   justify-content: start;
 }
 
+.navbar.sticky .logo,
+.logo__white {
+  display: none;
+}
+
+.navbar.sticky .logo__white {
+  display: block;
+}
+
 .navbar-nav {
   padding-left: 80px;
 }
@@ -189,11 +198,11 @@ nav.navbar {
 }
 
 li.active .nav-link {
-  color: var(--white) !important;
+  color: var(--dark-gary) !important;
 }
 
 .nav-link.active {
-  color: var(--white) !important;
+  color: var(--dark-gary) !important;
 }
 
 .navbar.sticky .nav-link {
@@ -201,7 +210,7 @@ li.active .nav-link {
 }
 
 .nav-link:hover {
-  color: var(--white) !important;
+  color: var(--dark-gary) !important;
 }
 
 @media (max-width: 992px) {
@@ -351,7 +360,329 @@ li.active .nav-link {
 
 /* Navigation Section CSS End */
 
+/* Hero Section CSS Start */
+
+.hero__content {
+  padding: 170px 50px 80px 33%;
+}
+
+.hero__content h1 {
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--primary);
+  margin-bottom: 0;
+}
+
+.hero__content p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--dark-gary);
+  padding: 30px 0;
+}
+
+/* Hero Section CSS End */
+
 /* Header Part CSS End */
+
+/* Main Part CSS Start */
+
+/* About Section CSS Start */
+
+.about__wrapper {
+  background: var(--primary);
+  padding: 100px 0;
+}
+
+.about__title h2 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--white);
+  margin-bottom: 35px;
+}
+
+.about__buttons {
+  position: relative;
+  padding-left: 30px;
+}
+
+.about__buttons::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #a3a3a3;
+}
+
+.about__buttons .nav-pills {
+  flex-direction: column;
+  align-items: start;
+}
+
+.about__buttons .nav-link {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #a9a9a9;
+  padding: 10px 0 !important;
+  text-align: left;
+}
+
+.about__buttons .nav-link.active {
+  color: var(--white) !important;
+  background: transparent;
+}
+
+.about__content {
+  padding-left: 100px;
+}
+
+.about__content p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #a9a9a9;
+  margin-bottom: 25px;
+}
+
+.about__content a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--white);
+}
+
+.about__content a i {
+  padding-left: 10px;
+}
+
+/* About Section CSS End */
+
+/* Services Section CSS Start */
+
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.services__card {
+  padding: 140px 50px;
+  text-align: center;
+}
+
+.services__content h2 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.services__content p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--white);
+  padding: 30px 0 50px;
+  margin-bottom: 0;
+}
+
+.freight__delivery {
+  background: url(../images/freight-and-delivery-services-img.webp);
+}
+
+.construction__building {
+  background: url(../images/construction-and-building-services-img.webp);
+}
+
+.guided__tour__experience {
+  background: url(../images/guided-tours-and-experiences-img.webp);
+}
+
+.vehicle__equipment__rentals {
+  background: url(../images/vehicle-and-equipment-rentals-img.webp);
+}
+
+.freight__delivery,
+.construction__building,
+.guided__tour__experience,
+.vehicle__equipment__rentals {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Services Section CSS End */
+
+/* Faq Section CSS Start */
+
+.faq__wrapper {
+  background: #f3f3f3;
+  padding: 80px 0 50px;
+}
+
+.faq__content {
+  padding-right: 120px;
+}
+
+.faq__content h2 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 57px;
+  color: var(--primary);
+}
+
+.faq__content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  color: #585b5f;
+}
+
+.accordion {
+  background: #f3f3f3 !important;
+}
+
+.accordion-item {
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 2px solid var(--black);
+  border-radius: 0 !important;
+}
+
+.faq__accordion .accordion-button {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 90%;
+  color: var(--primary);
+  background-color: transparent !important;
+  padding: 30px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-button:hover {
+  color: var(--dark-gary);
+}
+
+.faq__accordion .accordion-button:not(.collapsed) {
+  color: var(--dark-gary);
+  background: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  background-image: url(../images/chevron-down-icon.svg);
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary);
+  background: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../images/chevron-up-icon.svg);
+  transform: none;
+}
+
+.accordion-body {
+  padding: 0 10px 30px;
+}
+
+.accordion-body p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--dark-gary);
+}
+
+/* Faq Section CSS End */
+
+/* Contact Section CSS Start */
+
+.contact__wrapper {
+  padding: 100px 0;
+}
+
+.contact__container {
+  max-width: 740px;
+  margin: auto;
+}
+
+.contact__container h2 {
+  font-size: 65px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100%;
+  color: var(--primary);
+  margin-bottom: 50px;
+}
+
+.input__fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 35px;
+}
+
+.input__field,
+.textarea__field {
+  width: 100%;
+}
+
+.input__field input,
+.textarea__field textarea {
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 2px solid #393a3d;
+}
+
+.textarea__field label {
+  font-size: 20px;
+  color: #7a7a7a;
+}
+
+.textarea__field textarea {
+  background: #f6f6f6;
+}
+
+.input__field input:focus,
+.textarea__field textarea:focus {
+  outline: 0;
+}
+
+.contact__form ::placeholder {
+  font-size: 20px;
+  color: #7a7a7a;
+}
+
+.submit__btn input {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--primary);
+  padding: 18px 50px !important;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit__btn input:hover {
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--primary);
+}
+
+/* Contact Section CSS End */
+
+/* Main Part CSS End */
 
 /* Footer Part CSS Start */
 
