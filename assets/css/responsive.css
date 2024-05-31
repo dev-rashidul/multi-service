@@ -1,18 +1,6 @@
-/* Min Width 1201px and Max Width 1399400*/
-
-@media (min-width: 1201px) and (max-width: 1400px) {
-  .hero__content {
-    padding: 170px 50px 80px 19%;
-  }
-}
-
 /* Min Width 993px and Max Width 1199200*/
 
 @media (min-width: 993px) and (max-width: 1200px) {
-  .hero__content {
-    padding: 169px 50px 50px 10%;
-  }
-
   .hero__content h1,
   .contact__container h2 {
     font-size: 45px;
