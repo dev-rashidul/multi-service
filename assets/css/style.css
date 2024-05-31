@@ -91,7 +91,8 @@ img {
 .dark__btn a,
 .dark__btn a:focus,
 .light__btn a,
-.light__btn a:focus {
+.light__btn a:focus,
+.light__btn span {
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
@@ -110,13 +111,15 @@ img {
 }
 
 .light__btn a,
-.light__btn a:focus {
+.light__btn a:focus,
+.light__btn span {
   color: var(--primary);
   background: var(--white);
   border: 1px solid var(--white);
 }
 
-.light__btn a:hover {
+.light__btn a:hover,
+.light__btn span:hover {
   color: var(--white);
   background: transparent;
 }
@@ -198,11 +201,11 @@ nav.navbar {
 }
 
 li.active .nav-link {
-  color: var(--dark-gary) !important;
+  color: #dbdbdb !important;
 }
 
 .nav-link.active {
-  color: var(--dark-gary) !important;
+  color: #dbdbdb !important;
 }
 
 .navbar.sticky .nav-link {
@@ -210,6 +213,10 @@ li.active .nav-link {
 }
 
 .nav-link:hover {
+  color: #dbdbdb !important;
+}
+
+.navbar.sticky .nav-link:hover {
   color: var(--dark-gary) !important;
 }
 
@@ -266,7 +273,6 @@ li.active .nav-link {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Playfair Display";
     font-size: 18px;
     font-weight: 700;
     color: var(--black);
@@ -382,6 +388,11 @@ li.active .nav-link {
   padding: 30px 0;
 }
 
+.hero__img,
+.hero__img img {
+  height: 100%;
+}
+
 /* Hero Section CSS End */
 
 /* Header Part CSS End */
@@ -450,10 +461,15 @@ li.active .nav-link {
 }
 
 .about__content a {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 100%;
   color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.about__content a:hover {
+  color: var(--gray);
 }
 
 .about__content a i {
@@ -678,6 +694,11 @@ li.active .nav-link {
   color: var(--primary);
   background: transparent;
   border: 1px solid var(--primary);
+}
+
+.error-message {
+  color: red;
+  display: none;
 }
 
 /* Contact Section CSS End */

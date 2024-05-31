@@ -489,10 +489,17 @@
                           we offer project management, design, building, and
                           renovation solutions tailored to your requirements.
                         </p>
-                        <a href="#"
-                          >Bruny Island Freight
-                          <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                        <div class="d-flex flex-column flex-lg-row gap-3">
+                          <a
+                            href="https://www.excavationcontractorhobart.com.au"
+                            >Excavation Contractor Hobart
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </a>
+                          <a href="https://www.esconstruction.com.au"
+                            >Elite Souther Construction
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </a>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -530,7 +537,11 @@
       <section id="Services">
         <div class="services__wrapper">
           <div class="services__container">
-            <div class="services__card freight__delivery">
+            <a
+              target="_blank"
+              href="https://tour-bruny-island.netlify.app"
+              class="services__card freight__delivery"
+            >
               <div class="services__content">
                 <h2>Freight and Delivery Services</h2>
                 <p>
@@ -541,10 +552,10 @@
                   delivery.
                 </p>
                 <div class="light__btn">
-                  <a href="#">VIEW WEBSITE</a>
+                  <span>VIEW WEBSITE</span>
                 </div>
               </div>
-            </div>
+            </a>
             <div class="services__card construction__building">
               <div class="services__content">
                 <h2>Construction and Building Services</h2>
@@ -558,15 +569,25 @@
                   class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-md-3"
                 >
                   <div class="light__btn">
-                    <a href="#">CONSTRUCTION</a>
+                    <a target="_blank" href="https://www.esconstruction.com.au"
+                      >CONSTRUCTION</a
+                    >
                   </div>
                   <div class="light__btn pt-5 pt-md-0">
-                    <a href="#">EXCAVATION</a>
+                    <a
+                      target="_blank"
+                      href="https://www.excavationcontractorhobart.com.au"
+                      >EXCAVATION</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
-            <div class="services__card guided__tour__experience">
+            <a
+              href="https://www.explorebrunyisland.com.au"
+              target="_blank"
+              class="services__card guided__tour__experience"
+            >
               <div class="services__content">
                 <h2>Guided Tours and Experiences</h2>
                 <p>
@@ -577,11 +598,15 @@
                   interests.
                 </p>
                 <div class="light__btn">
-                  <a href="#">VIEW WEBSITE</a>
+                  <span>VIEW WEBSITE</span>
                 </div>
               </div>
-            </div>
-            <div class="services__card vehicle__equipment__rentals">
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              class="services__card vehicle__equipment__rentals"
+            >
               <div class="services__content">
                 <h2>Vehicle and Equipment Rentals</h2>
                 <p>
@@ -591,10 +616,10 @@
                   operational needs.
                 </p>
                 <div class="light__btn">
-                  <a href="#">VIEW WEBSITE</a>
+                  <span>VIEW WEBSITE</span>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -804,11 +829,14 @@
                     </div>
                     <div class="input__field">
                       <input
-                        type="number"
+                        type="tel"
+                        id="mobileNumber"
                         name="entry.1166974658"
                         placeholder="Mobile"
-                        required
                       />
+                      <div id="errorMessage" class="error-message">
+                        Please type numbers only.
+                      </div>
                     </div>
                     <div class="input__field">
                       <input
@@ -879,7 +907,7 @@
                 <div class="footer__links">
                   <h6>Services</h6>
                   <ul class="ps-3">
-                    <li><a href="#">Hire and Rentals</a></li>
+                    <li><a href="#Services">Hire and Rentals</a></li>
                     <li><a href="#">Building and Construction</a></li>
                     <li><a href="#">Freight and delivery</a></li>
                     <li><a href="#">Tours and experiences</a></li>
@@ -953,5 +981,17 @@
 
     <!-- Custom JavaScript -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var mobileNumberInput = document.getElementById("mobileNumber");
+        var errorMessage = document.getElementById("errorMessage");
+
+        mobileNumberInput.addEventListener("input", function (event) {
+          var inputValue = this.value.replace(/\D/g, "");
+          this.value = inputValue;
+        });
+      });
+    </script>
   </body>
 </html>

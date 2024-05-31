@@ -10,12 +10,12 @@
 
 @media (min-width: 993px) and (max-width: 1200px) {
   .hero__content {
-    padding: 169px 50px 80px 19%;
+    padding: 169px 50px 50px 10%;
   }
 
   .hero__content h1,
   .contact__container h2 {
-    font-size: 56px;
+    font-size: 45px;
   }
 
   .services__content h2 {
