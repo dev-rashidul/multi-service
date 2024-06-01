@@ -124,7 +124,9 @@ img {
   background: transparent;
 }
 
-#About, #Services, #Contact {
+#About,
+#Services,
+#Contact {
   scroll-margin-top: 5vh;
 }
 
@@ -653,6 +655,7 @@ li.active .nav-link {
 
 .input__field,
 .textarea__field {
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -660,7 +663,7 @@ li.active .nav-link {
 .textarea__field textarea {
   width: 100%;
   padding: 15px 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: none;
   border-bottom: 2px solid #393a3d;
 }
@@ -700,6 +703,10 @@ li.active .nav-link {
   color: var(--primary);
   background: transparent;
   border: 1px solid var(--primary);
+}
+
+.error {
+  color: red;
 }
 
 /* Contact Section CSS End */

@@ -81,3 +81,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+// Mobile Number field Validation
+
+const mobileInput = document.getElementById("mobile");
+const mobileError = document.getElementById("mobileError");
+
+mobileInput.addEventListener("input", function () {
+  // Remove any non-numeric characters
+  mobileInput.value = mobileInput.value.replace(/\D/g, "");
+
+  const mobileNumber = mobileInput.value;
+
+  if (!/^\d+$/.test(mobileNumber)) {
+    mobileError.textContent = "Only numbers are acceptable.";
+    mobileInput.classList.add("error");
+  } else if (mobileNumber.length < 11) {
+    mobileError.textContent = "Please enter minimum 11 digits.";
+    mobileInput.classList.add("error");
+  } else if (mobileNumber.length > 11) {
+    mobileError.textContent = "You can't enter more than 11 digits.";
+    mobileInput.classList.add("error");
+  } else {
+    mobileError.textContent = "";
+    mobileInput.classList.remove("error");
+  }
+});

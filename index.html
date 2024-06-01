@@ -830,10 +830,13 @@
                     <div class="input__field">
                       <input
                         type="tel"
-                        id="mobileNumber"
+                        id="mobile"
                         name="entry.1166974658"
                         placeholder="Mobile"
+                        maxlength="11"
                       />
+                      <br />
+                      <span id="mobileError" class="error"></span>
                     </div>
                     <div class="input__field">
                       <input
@@ -973,22 +976,17 @@
 
     <!-- Footer Part HTML End -->
 
+    <form id="mobileForm">
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" maxlength="10" />
+      <br />
+      <span id="mobileError" class="error"></span>
+    </form>
+
     <!-- Bootstrap JavaScript -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="assets/js/script.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var mobileNumberInput = document.getElementById("mobileNumber");
-        var errorMessage = document.getElementById("errorMessage");
-
-        mobileNumberInput.addEventListener("input", function (event) {
-          var inputValue = this.value.replace(/\D/g, "");
-          this.value = inputValue;
-        });
-      });
-    </script>
   </body>
 </html>
